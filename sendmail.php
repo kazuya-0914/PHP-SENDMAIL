@@ -27,8 +27,8 @@ class Sendmail{
       $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
       $phpmailer->SMTPAuth = true;
       $phpmailer->Port = 2525;
-      $phpmailer->Username = '958f4683846a82';
-      $phpmailer->Password = 'd1447e2aac7c0c';
+      $phpmailer->Username = ''; // MailtrapのユーザーID
+      $phpmailer->Password = ''; // Mailtrapのパスワード
       // ここまでMailtrapの内容です
     
       $phpmailer->setFrom($this->email, $this->name); // Fromに当たります

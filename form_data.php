@@ -8,10 +8,10 @@ class FormData {
 
   // フォームデータがあれば変数に格納
   public function __construct() {
-    $this->user_name = isset($_POST['user_name']) ? $_POST['user_name'] : '' ;
-    $this->email = isset($_POST['email']) ? $_POST['email'] : '' ;
-    $this->message = isset($_POST['message']) ? $_POST['message'] : '' ;
-    $this->submit = isset($_POST['submit']) ? $_POST['submit'] : '' ;
+    $this->user_name = isset($_POST['user_name']) ? htmlspecialchars($_POST['user_name']) : '' ;
+    $this->email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '' ;
+    $this->message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '' ;
+    $this->submit = isset($_POST['submit']) ? htmlspecialchars($_POST['submit']) : '' ;
     $this->errors = [];
   }
 

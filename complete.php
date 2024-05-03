@@ -6,7 +6,7 @@ session_start();
 require 'header.php'; // ヘッダー
 require 'sendmail.php'; // メール送信
 
-$submit = isset($_POST['submit']) ? $_POST['submit'] : '';
+$submit = isset($_POST['submit']) ? htmlspecialchars($_POST['submit']) : '';
 $token = isset($_POST['token']) ? $_POST['token'] : '';
 
 header_html();
