@@ -1,4 +1,6 @@
 <?php
+// 全エラー表示
+ini_set( 'display_errors', 1 );
 // セッションを開始
 session_start();
 

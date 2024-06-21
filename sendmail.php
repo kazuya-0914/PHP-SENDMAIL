@@ -1,4 +1,7 @@
 <?php
+// 全エラー表示
+ini_set( 'display_errors', 1 );
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -27,8 +30,8 @@ class Sendmail{
       $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
       $phpmailer->SMTPAuth = true;
       $phpmailer->Port = 2525;
-      $phpmailer->Username = ''; // MailtrapのユーザーID
-      $phpmailer->Password = ''; // Mailtrapのパスワード
+      $phpmailer->Username = '2661fe38718f83'; // MailtrapのユーザーID
+      $phpmailer->Password = '85e78962f4dcc0'; // Mailtrapのパスワード
       // ここまでMailtrapの内容です
     
       $phpmailer->setFrom($this->email, $this->name); // Fromに当たります
