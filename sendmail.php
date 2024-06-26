@@ -2,14 +2,12 @@
 // 全エラー表示
 ini_set( 'display_errors', 1 );
 
+// メール送信ライブラリ
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php';
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
-
-class Sendmail{
+class Sendmail extends PHPMailer {
   public $name;
   public $email;
   public $message;
